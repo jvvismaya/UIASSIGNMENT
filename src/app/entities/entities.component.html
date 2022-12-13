@@ -1,0 +1,37 @@
+    <div class="table-responsive">
+    <input  type="search"  [(ngModel)]="filterText" placeholder="Search..">
+    
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+    <tr>
+        <th>Id</th>
+        <th>Type of Device</th>
+        <th>Model</th>
+        <th>Manufacturer</th>
+        <th>OS</th>
+        <th>DateofPurchase</th>
+        <th>CurrentClient</th>
+        <th>SerielNumber</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th>IP</th>
+        
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of userData | filter:filterText">
+        <td>{{user.id}}</td>
+        <td>{{user.typeofdevice}}</td>
+        <td>{{user.model}}</td>
+        <td>{{user.manufacturer}}</td>
+        <td>{{user.os}}</td>
+        <td>{{user.dateofpurchase|date}}</td>
+        <td>{{user.currentclient}}</td>
+        <td>{{user.serielnumber}}</td>
+        <td>{{user.location}}</td>
+        <td>{{user.status}}</td>
+        <td>{{user.ip}}</td>
+    </tr>
+</tbody>
+</table>
+</div>
